@@ -15,8 +15,6 @@ def Hello():
     return data 
 
 
-
-
 @app.route("/school_guardian", methods=["POST"])
 def school_guardian():
     request_data = request.get_json()
@@ -48,8 +46,6 @@ def school_guardian():
             ]
         }
 
-
-
     elif action == "consultar_carros":
         carros = consultarCarros()
         msg = []
@@ -72,7 +68,6 @@ def school_guardian():
             ]
         }
 
-    
     elif action == "consultar_responsaveis":
         responsaveis = consultarResponsaveis()
         msg = []
@@ -95,7 +90,6 @@ def school_guardian():
                 }
             ]
         }
-
     
     elif action == "consultar_tipo_busca_aluno":
         msg = consultarTipoBuscaAluno(parameters)
@@ -131,15 +125,12 @@ def school_guardian():
         }
         
     return resposta
-    
-
-
-
-   
 
 
 # ---------------- functions ----------------
 #1 - Qual filho está na escola hoje
+
+
 def consultarAlunosNaEscola():
     try:
         alunos = DBconsultarAlunosNaEscola()
@@ -205,8 +196,6 @@ def consultarHorarioRetirada(parameters):
     print(msg)
     
     return msg
-
-
 
 
 def consultarUltimaPessoaBuscarAluno(parameters):
